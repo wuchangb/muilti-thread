@@ -1,13 +1,12 @@
 package thread.control.printer;
 
 import static util.MyLogger.*;
-import static util.ThreadUtils.*;
 
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.concurrent.LinkedBlockingDeque;
 
-public class MyPrinterV2 {
+public class MyPrinterV3 {
 	public static void main(String[] args) {
 		Printer printer = new Printer();
 		Thread printerThread = new Thread(printer, "printer");
@@ -33,6 +32,7 @@ public class MyPrinterV2 {
 		public void run() {
 			while (!Thread.interrupted()) {
 				if (jobQueue.isEmpty()) {
+					Thread.yield();
 					continue;
 				}
 
