@@ -1,9 +1,8 @@
-package thread.cas.incremenkt;
+package thread.cas.increment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static util.MyLogger.log;
 import static util.ThreadUtils.sleep;
 
 public class IncrementThreadMain {
