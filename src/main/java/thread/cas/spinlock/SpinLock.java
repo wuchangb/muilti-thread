@@ -20,5 +20,6 @@ public class SpinLock {
     public void unLock() {
         lock = false;
         log("락 반납 완료");
+        System.out.println();
     }
 }
